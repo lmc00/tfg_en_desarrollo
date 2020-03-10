@@ -1,0 +1,16 @@
+cp -r /srv/image-classification-tf/meter_docker/conus_perfecto/conus_limpios/Conus /srv/image-classification-tf/data/images/
+cp /srv/image-classification-tf/meter_docker/conus_perfecto/organizador.py /srv/image-classification-tf/data/images/
+cp /srv/image-classification-tf/meter_docker/conus_perfecto/genera_val.py /srv/image-classification-tf/data/images/
+cd /srv/image-classification-tf/data/images/
+python3 organizador.py
+rm organizador.py
+python3 genera_val.py
+rm genera_val.py
+mv train.txt /srv/image-classification-tf/data/dataset_files/
+mv location.txt /srv/image-classification-tf/
+mv classes.txt /srv/image-classification-tf/data/dataset_files/
+mv val.txt /srv/image-classification-tf/data/dataset_files/
+apt update
+apt install nano
+cd /srv/image-classification-tf/imgclas
+nano train_runfile.py

@@ -1,0 +1,35 @@
+group                    key                           value                          
+===========================================================================
+augmentation             train_mode                    {'h_flip': 0.5, 'v_flip': 0.5, 'rot': 0.5, 'rot_lim': 45, 'stretch': 0.0, 'crop': 1.0, 'zoom': 0.2, 'blur': 0.15, 'pixel_noise': 0.2, 'pixel_sat': 0.3, 'cutout': 0.0} 
+augmentation             val_mode                      {'h_flip': 0.5, 'v_flip': 0.0, 'rot': 0.5, 'rot_lim': 30, 'stretch': 0.0, 'crop': 0.9, 'zoom': 0.1, 'blur': 0.1, 'pixel_noise': 0.1, 'pixel_sat': 0.1, 'cutout': 0.0} 
+---------------------------------------------------------------------------
+dataset                  mean_RGB                      [65.2957750065667, 53.376152081083006, 42.42144650390577] 
+dataset                  std_RGB                       [86.4337477243687, 74.550356501806, 63.781154319754386] 
+---------------------------------------------------------------------------
+general                  base_directory                .               
+general                  images_directory              data/images     
+---------------------------------------------------------------------------
+model                    image_size                    224             
+model                    modelname                     Xception        
+model                    num_classes                   83              
+model                    preprocess_mode               tf              
+---------------------------------------------------------------------------
+monitor                  use_remote                    False           
+monitor                  use_tensorboard               True            
+---------------------------------------------------------------------------
+testing                  ckpt_name                     parametros_entreno_con_aumento.h5 
+testing                  timestamp                     None            
+---------------------------------------------------------------------------
+training                 batch_size                    16              
+training                 ckpt_freq                     None            
+training                 epochs                        50              
+training                 initial_lr                    0.001           
+training                 l2_reg                        0.0001          
+training                 lr_schedule_mode              step            
+training                 lr_step_decay                 0.1             
+training                 lr_step_schedule              [0.7, 0.9]      
+training                 mode                          normal          
+training                 use_class_weights             False           
+training                 use_early_stopping            False           
+training                 use_validation                True            
+---------------------------------------------------------------------------
